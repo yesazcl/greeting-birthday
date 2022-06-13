@@ -19,13 +19,11 @@ public class UserController {
     }
 
     @GetMapping("/user")
-    public String getUserByBirthday(@RequestParam String birthdayOfMonth, @RequestParam String birthdayOfDay,
-                                    @RequestParam(required = false) String version,
-                                    @RequestParam(required = false) String format) {
+    public String getUserByBirthday(@RequestParam String birthdayOfMonth, @RequestParam String birthdayOfDay) {
         UserRequestModel userRequestModel = new UserRequestModel();
         userRequestModel.setBirthMonth(birthdayOfMonth);
         userRequestModel.setBirthDay(birthdayOfDay);
-        return userInput.findByBirthday(userRequestModel, version, format);
+        return userInput.findByBirthday(userRequestModel, "v1", "json");
     }
 
     @GetMapping("/user/all")
