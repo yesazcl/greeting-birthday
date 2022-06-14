@@ -8,3 +8,12 @@
 - birthdayOfDay = the day of brith day
 - version=v1 or v2 or v3 or v4
 - format=json or xml or empty
+
+### Branches
+- version1
+- version2
+- version3
+- version4
+- version5
+- version6-json
+- version7-xml
